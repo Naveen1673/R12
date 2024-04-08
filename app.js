@@ -7,6 +7,9 @@ const app = express();
 
 const PORT = process.env.PORT;
 
+const conn = require("./models/dbconfig");
+conn.dbconnection();
+
 
 app.listen(PORT, () => {
     console.log(`The Server is running on port ${PORT}!`);
